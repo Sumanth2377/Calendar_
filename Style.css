@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #ff5e88, #ff9966);
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.calendar {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+.calendar header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar h3 {
+  font-weight: 700;
+}
+
+.calendar nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #prev,
+  #next {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3); 
+    transition: color 0.3s ease;
+  }
+  
+  #prev:hover,
+  #next:hover {
+    color: rgba(0, 0, 0, 0.7); 
+  }
+  
+
+.calendar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.calendar ul.days li {
+  font-weight: 600;
+}
+
+.calendar ul li {
+  width: calc(100% / 7);
+  padding: 10px;
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+}
+
+.dates li.today {
+  color: #fff;
+  font-weight: bold;
+  background: #ff5e88;
+  border-radius: 50%;
+}
+
+.dates li.today::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ff5e88;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dates li.inactive {
+  color: #ccc;
+}
+.calendar::after {
+    content: "By Sumanth :)";
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
